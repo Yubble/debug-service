@@ -16,7 +16,7 @@ const delay = async time => {
   })
 }
 
-router.post('/pay/pay-info', async (ctx, next) => {
+router.post('/pay', async (ctx, next) => {
   await delay(30000)
   ctx.body = {
     code: 0,
@@ -26,13 +26,13 @@ router.post('/pay/pay-info', async (ctx, next) => {
   }
 })
 
-router.post('/bi-service/rpc/node/analytics', async (ctx, next) => {
+router.post('/bi-service', async (ctx, next) => {
   console.log('访问了埋点接口')
   await delay(30000)
   ctx.body = 'end'
 })
 
-router.get('/bi-service/rpc/node/analytics', async (ctx, next) => {
+router.get('/bi-service', async (ctx, next) => {
   // await delay(2000)
   ctx.body = 'end'
 })
